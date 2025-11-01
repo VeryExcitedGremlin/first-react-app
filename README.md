@@ -1,4 +1,4 @@
-#Run `npm run deploy` to deploy, view at https://veryexcitedgremlin.github.io/first-react-app/
+# Run `npm run deploy` to deploy, view at https://veryexcitedgremlin.github.io/first-react-app/
 
 # Getting Started with Create React App
 
