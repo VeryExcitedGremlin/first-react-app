@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import HelloWorldInline from "./HelloWorld/HelloWorld";
+import { HelloWorld } from "./HelloWorld/HelloWorld";
+import {
+  StaticCounter,
+  InteractiveCounter,
+  ToggleSwitch,
+} from "./Counter/counter";
+import { PersonalFooter } from "./Footer/personal-footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='container' id='top'>
+        <h1>Module 47 - Intro to React</h1>
+        <h2>Inline Styles</h2>
+        <div>
+          <HelloWorldInline />
+          <HelloWorldInline name="Alice" />
+          <HelloWorldInline name="Bob" />
+          <HelloWorldInline name="Jane" />
+        </div>
+        <h2>CSS Stylesheet</h2>
+        <div>
+          <HelloWorld />
+          <HelloWorld name="Alice" />
+          <HelloWorld name="Bob" />
+          <HelloWorld name="Jane" />
+        </div>
+
+        <h1>Module 49 - State Management</h1>
+        <StaticCounter />
+        <InteractiveCounter />
+        <ToggleSwitch />
+      </div>
+      <PersonalFooter />
+    </>
   );
 }
 
