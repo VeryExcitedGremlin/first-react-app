@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import "./Nav.css";
 
-export default function HiddenNavigation() {
+export default function Navigation() {
   return (
     <div className="container">
       <h1>This technically just updates the same page!!!</h1>
