@@ -3,7 +3,7 @@ import {Route, Routes} from 'react-router';
 import DisplayHello from "./components/module-47-react-basics/display-47/Display47";
 import DisplayCounters from "./components/module-49-state-management/display-49/Display49";
 import { PersonalFooter } from "./components/Footer/personal-footer";
-import HiddenNavigation from "./components/HiddenNavigation/HiddenNav";
+import HiddenNavigation from "./components/Navigation/Nav";
 
 function App() {
   return (

@@ -3,13 +3,13 @@ li {
     margin-bottom: 1em;
 }
 
-a {
+.nav {
     text-decoration: none;
     color: #E079C0;
 }
-a:active, a:hover {
+.nav:active, .nav:hover {
     text-decoration: underline;
 }
-a:visited {
+.nav:visited {
     color: #B2E079;
 }
