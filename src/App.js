@@ -8,6 +8,8 @@ import Navigation from "./components/Navigation/Nav";
 function App() {
   return (
     <>
+      <h1>This is all the same HTML page</h1>
+      <p>React only redraws what changes!</p>
       <Routes>
         <Route path="/first-react-app/" element={<Navigation />} />
         <Route path="/first-react-app/47" element={<DisplayHello />} />

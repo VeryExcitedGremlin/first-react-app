@@ -3,7 +3,6 @@ import "./personal-footer.css";
 
 export function PersonalFooter() {
   const location = useLocation();
-  console.log(location.pathname);
   return (
     <footer className="bookend">
       <div>Posted by Ashton Oder 2025</div>

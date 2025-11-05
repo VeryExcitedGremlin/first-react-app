@@ -12,7 +12,7 @@ export function HelloWorldInline({name}) {
         textAlign: 'center',
         margin: '20px 0'
     };
-    return <h2 style={inlineStyle}>Hello {name ? name : 'World'}!</h2>;
+    return <h4 style={inlineStyle}>Hello {name ? name : 'World'}!</h4>;
 }
 
 

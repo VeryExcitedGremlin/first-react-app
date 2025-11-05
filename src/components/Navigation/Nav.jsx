@@ -4,8 +4,8 @@ import "./Nav.css";
 export default function Navigation() {
   return (
     <div className="container">
-      <h1>This technically just updates the same page!!!</h1>
-      <h2>Pick somewhere else to be:</h2>
+      <h2>This technically just updates the same page!!!</h2>
+      <h3>Pick somewhere else to be:</h3>
       <nav>
         <li>
           <Link className="nav" to="/first-react-app/47">

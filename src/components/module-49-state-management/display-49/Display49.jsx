@@ -4,7 +4,7 @@ import './Display49.css'
 export default function DisplayCounters() {
   return (
     <div className='container'>
-      <h1>Module 49 - State Management</h1>
+      <h2>Module 49 - State Management</h2>
       <StaticCounter />
       <InteractiveCounter />
       <ToggleSwitch />
