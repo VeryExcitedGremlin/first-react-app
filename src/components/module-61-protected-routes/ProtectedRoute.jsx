@@ -5,12 +5,13 @@ export default function ProtectedRoute({ isLoggedIn, children }) {
 
   if (!isLoggedIn) {
     return (
-      <Navigate
-        to="/first-react-app/Login"
-        state={{ from: location }}
-        replace
-      />
+      // <Navigate
+      //   to="/first-react-app/Login"
+      //   state={{ from: location }}
+      //   replace
+      // />
+      children[1]
     );
   }
-  return children;
+  return children[0];
 }

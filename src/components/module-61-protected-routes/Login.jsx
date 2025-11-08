@@ -3,15 +3,15 @@ import { useNavigate, useLocation } from "react-router";
 
 export default function Login({ onLogin }) {
   const [username, setUsername] = useState("");
-  const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/first-react-app/dashboard";
+  // const navigate = useNavigate();
+  // const location = useLocation();
+  // const from = location.state?.from?.pathname || "/first-react-app/61";
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username.trim()) {
       onLogin();
-      navigate(from, { replace: true });
+      // navigate(from, { replace: true });
     }
   };
 

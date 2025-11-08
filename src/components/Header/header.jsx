@@ -6,17 +6,21 @@ export default function Header({ isLoggedIn, onLogout }) {
     <div className="container">
       <h1>This is all the same HTML page</h1>
       <p>React only redraws what changes!</p>
-      {location.pathname !== '/first-react-app/Login' && <div className="nav-auth">
-        {isLoggedIn ? (
-          <button onClick={onLogout} className="btn-logout nav">
-            Logout
-          </button>
-        ) : (
-          <Link to="/first-react-app/Login" className="btn-login nav">
-            Login
-          </Link>
-        )}
-      </div>}
+      {
+        <div className="nav-auth">
+          {isLoggedIn ? (
+            <button onClick={onLogout} className="btn-logout nav">
+              Logout
+            </button>
+          ) : (
+            location.pathname !== "/first-react-app/61" && (
+              <Link to="/first-react-app/61" className="btn-login nav">
+                Login
+              </Link>
+            )
+          )}
+        </div>
+      }
     </div>
   );
 }

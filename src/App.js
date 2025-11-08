@@ -8,10 +8,9 @@ import DisplayHello from "./components/module-47-react-basics/display-47/Display
 import DisplayCounters from "./components/module-49-state-management/display-49/Display49";
 import { PersonalFooter } from "./components/Footer/personal-footer";
 import Navigation from "./components/Navigation/Nav";
-import ProtectedRoute from './components/module-61-protected-routes/ProtectedRoute';
-import Dashboard from './components/module-61-protected-routes/Dashboard';
-import Login from './components/module-61-protected-routes/Login';
 import DisplayReducer from './components/module-63-useReducer/display-63/Display63';
+import DisplayProtected from './components/module-61-protected-routes/display-61/Display61';
+import Login from './components/module-61-protected-routes/Login';
 
 //stylesheet
 import "./App.css";
@@ -39,11 +38,9 @@ function App() {
         <Route path="/first-react-app/47" element={<DisplayHello />} />
         <Route path="/first-react-app/49" element={<DisplayCounters />} />
         <Route
-          path="/first-react-app/60"
+          path="/first-react-app/61"
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
-              <Dashboard />
-            </ProtectedRoute>
+            <DisplayProtected handleLogin={handleLogin} isLoggedIn={isLoggedIn}/>
           }
         />
         <Route
