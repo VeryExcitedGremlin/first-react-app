@@ -22,6 +22,11 @@ export default function Navigation({ isLoggedIn, onLogout }) {
             Protected Links
           </Link>
         </li>
+        <li>
+          <Link className="nav" to="/first-react-app/63">
+            useReducer
+          </Link>
+        </li>
       </nav>
     </div>
   );

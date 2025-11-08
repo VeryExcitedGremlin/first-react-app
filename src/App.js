@@ -11,6 +11,7 @@ import Navigation from "./components/Navigation/Nav";
 import ProtectedRoute from './components/module-61-protected-routes/ProtectedRoute';
 import Dashboard from './components/module-61-protected-routes/Dashboard';
 import Login from './components/module-61-protected-routes/Login';
+import DisplayReducer from './components/module-63-useReducer/display-63/Display63';
 
 //stylesheet
 import "./App.css";
@@ -49,6 +50,7 @@ function App() {
           path="/first-react-app/Login"
           element={<Login onLogin={handleLogin} />}
         />
+        <Route path='/first-react-app/63' element={<DisplayReducer />} />
         <Route
           path="*"
           element={
