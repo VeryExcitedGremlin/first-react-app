@@ -5,12 +5,11 @@ export function StaticCounter() {
 
   return (
     <>
-      <h3>Static Counter - This Does Nothing</h3>
       <div className="center">
         <h3>Count: {count}</h3>
         <div>
-          <button>-</button> {/* Does nothing! */}
-          <button>+</button>
+          <button className='btn-49'>-</button> {/* Does nothing! */}
+          <button className='btn-49'>+</button>
         </div>
       </div>
     </>
@@ -22,12 +21,11 @@ export function InteractiveCounter() {
 
   return (
     <>
-      <h3>Interactive Counter - This Counts</h3>
       <div className="center">
         <h3>Count: {count}</h3>
         <div>
-          <button onClick={() => setCount(count - 1)}>-</button>
-          <button onClick={() => setCount(count + 1)}>+</button>
+          <button className='btn-49' onClick={() => setCount(count - 1)}>-</button>
+          <button className='btn-49' onClick={() => setCount(count + 1)}>+</button>
         </div>
       </div>
     </>
@@ -39,11 +37,10 @@ export function ToggleSwitch() {
 
   return (
     <>
-      <h3>Switch - Click to turn ON or OFF</h3>
       <div className="center">
         <h4>The Switch is {isOn ? "ON" : "OFF"}</h4>
         <div className={`switch ${isOn ? "on" : "off"}`}>
-          <button id="switch" onClick={() => setIsOn(!isOn)}>
+          <button className='btn-49' id="switch" onClick={() => setIsOn(!isOn)}>
             <strong>{isOn ? "ON" : "OFF"}</strong>
           </button>
         </div>
