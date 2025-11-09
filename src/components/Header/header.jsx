@@ -3,11 +3,6 @@ import { Link, useLocation } from "react-router";
 
 export default function Header({ isLoggedIn, onLogout, username }) {
   const location = useLocation();
-  let name
-
-  useEffect( () => {
-    name = username;
-  }, [username]);
 
   return (
     <div className="container">
@@ -20,7 +15,7 @@ export default function Header({ isLoggedIn, onLogout, username }) {
               <button onClick={onLogout} className="btn-logout nav">
                 Logout
               </button>
-              <p>Welcome back {name}!</p>
+              <p>Welcome back {username}!</p>
             </>
           ) : (
             location.pathname !== "/first-react-app/61" && (

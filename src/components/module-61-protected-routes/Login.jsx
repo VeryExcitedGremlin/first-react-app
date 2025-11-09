@@ -15,11 +15,6 @@ export default function Login({ onLogin, handleChange, username }) {
       // navigate(from, { replace: true });
     }
   };
-  // let name;
-
-  // useEffect(() => {
-  //   name = username;
-  // }, [username]);
 
   return (
     <>

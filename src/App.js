@@ -16,6 +16,8 @@ import Login from './components/module-61-protected-routes/Login';
 import "./App.css";
 
 function App() {
+  const [username, setUsername] = useState("");
+  
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const handleLogin = () => {
     setIsLoggedIn(true);
@@ -24,11 +26,6 @@ function App() {
     setIsLoggedIn(false);
   };
   
-  const [username, setUsername] = useState("");
-  // const handleChange = (value) => {
-  //   setUsername(value);
-  // };
-
   return (
     <>
       <Header
@@ -54,7 +51,7 @@ function App() {
           element={
             <Login
               onLogin={handleLogin}
-              handleChange={setUsername}
+              handleChange={(value) => setUsername(value)}
               username={username}
             />
           }
