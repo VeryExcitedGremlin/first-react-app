@@ -1,7 +1,7 @@
 import { Navigate, useLocation } from "react-router";
 
 export default function ProtectedRoute({ isLoggedIn, children }) {
-  const location = useLocation();
+  // const location = useLocation();
 
   if (!isLoggedIn) {
     return (

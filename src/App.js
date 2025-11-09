@@ -17,37 +17,49 @@ import "./App.css";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
   const handleLogin = () => {
     setIsLoggedIn(true);
   }
   const handleLogout = () => {
     setIsLoggedIn(false);
   };
+  
+  const [username, setUsername] = useState("");
+  // const handleChange = (value) => {
+  //   setUsername(value);
+  // };
 
   return (
     <>
-      <Header isLoggedIn={isLoggedIn} onLogout={handleLogout} />
+      <Header
+        isLoggedIn={isLoggedIn}
+        onLogout={handleLogout}
+        username={username}
+      />
       <Routes>
-        <Route
-          path="/first-react-app/"
-          element={
-            <Navigation isLoggedIn={isLoggedIn} onLogout={handleLogout} />
-          }
-        />
+        <Route path="/first-react-app/" element={<Navigation />} />
         <Route path="/first-react-app/47" element={<DisplayHello />} />
         <Route path="/first-react-app/49" element={<DisplayCounters />} />
         <Route
           path="/first-react-app/61"
           element={
-            <DisplayProtected handleLogin={handleLogin} isLoggedIn={isLoggedIn}/>
+            <DisplayProtected
+              handleLogin={handleLogin}
+              isLoggedIn={isLoggedIn}
+            />
           }
         />
         <Route
           path="/first-react-app/Login"
-          element={<Login onLogin={handleLogin} />}
+          element={
+            <Login
+              onLogin={handleLogin}
+              handleChange={setUsername}
+              username={username}
+            />
+          }
         />
-        <Route path='/first-react-app/63' element={<DisplayReducer />} />
+        <Route path="/first-react-app/63" element={<DisplayReducer />} />
         <Route
           path="*"
           element={
