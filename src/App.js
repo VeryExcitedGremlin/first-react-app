@@ -42,9 +42,11 @@ function App() {
           element={
             <DisplayProtected
               isLoggedIn={isLoggedIn}
-              onLogin={handleLogin}
-              handleChange={(value) => setUsername(value)}
-              username={username}
+              login={{
+                onLogin: handleLogin,
+                handleChange: (value) => setUsername(value),
+                username: username,
+              }}
             />
           }
         />

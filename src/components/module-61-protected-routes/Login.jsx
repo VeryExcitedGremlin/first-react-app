@@ -1,18 +1,10 @@
-// import { useState } from "react";
-// import { useNavigate, useLocation } from "react-router";
-import { useEffect } from "react";
-
-export default function Login({ onLogin, handleChange, username }) {
-  // const [username, setUsername] = useState("");
-  // const navigate = useNavigate();
-  // const location = useLocation();
-  // const from = location.state?.from?.pathname || "/first-react-app/61";
+export default function Login({ login }) {
+  const { onLogin, handleChange, username } = login
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username && username.trim()) {
       onLogin();
-      // navigate(from, { replace: true });
     }
   };
 
