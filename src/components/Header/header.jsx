@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link, useLocation } from "react-router";
 
 export default function Header({ isLoggedIn, onLogout, username }) {
@@ -12,10 +11,10 @@ export default function Header({ isLoggedIn, onLogout, username }) {
         <div className="nav-auth">
           {isLoggedIn ? (
             <>
+              <p>Welcome back, {username}!</p>
               <button onClick={onLogout} className="btn-logout nav">
                 Logout
               </button>
-              <p>Welcome back {username}!</p>
             </>
           ) : (
             location.pathname !== "/first-react-app/61" && (

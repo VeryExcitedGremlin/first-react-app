@@ -10,7 +10,6 @@ import { PersonalFooter } from "./components/Footer/personal-footer";
 import Navigation from "./components/Navigation/Nav";
 import DisplayReducer from './components/module-63-useReducer/display-63/Display63';
 import DisplayProtected from './components/module-61-protected-routes/display-61/Display61';
-import Login from './components/module-61-protected-routes/Login';
 
 //stylesheet
 import "./App.css";
@@ -24,6 +23,7 @@ function App() {
   }
   const handleLogout = () => {
     setIsLoggedIn(false);
+    setUsername('');
   };
   
   return (
@@ -41,15 +41,7 @@ function App() {
           path="/first-react-app/61"
           element={
             <DisplayProtected
-              handleLogin={handleLogin}
               isLoggedIn={isLoggedIn}
-            />
-          }
-        />
-        <Route
-          path="/first-react-app/Login"
-          element={
-            <Login
               onLogin={handleLogin}
               handleChange={(value) => setUsername(value)}
               username={username}

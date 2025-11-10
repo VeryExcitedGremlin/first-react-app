@@ -4,8 +4,6 @@ import "./Nav.css";
 export default function Navigation() {
   return (
     <div className="container">
-      {/* <h2>This technically just updates the same page!!!</h2>
-      <h3>Pick somewhere else to be:</h3> */}
       <h2>Pick somewhere else to be:</h2>
       <nav>
         <li>

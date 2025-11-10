@@ -2,13 +2,17 @@ import ProtectedRoute from "../ProtectedRoute";
 import Dashboard from "../Dashboard";
 import Login from "../Login";
 
-export default function DisplayProtected({ isLoggedIn, handleLogin, handleUsername }) {
+export default function DisplayProtected({ isLoggedIn, onLogin, username, handleChange }) {
   return (
     <>
       <h2>Module 61 - Protected Routes</h2>
       <ProtectedRoute isLoggedIn={isLoggedIn}>
         <Dashboard />
-        <Login onLogin={handleLogin} />
+        <Login
+          onLogin={onLogin}
+          handleChange={handleChange}
+          username={username}
+        />
       </ProtectedRoute>
     </>
   );
